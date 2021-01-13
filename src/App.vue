@@ -46,7 +46,7 @@
         })
         this.$notify({
           group: 'order',
-          title: '⚠️ Nouvelle commande reçu',
+          title: '🔔 Nouvelle commande reçu',
           type: 'infos',
           position: 'top center'
         });
