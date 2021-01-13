@@ -27,7 +27,7 @@
       this.$router.push('/login')
       let i = 0;
 
-      setInterval(() => {
+      let notif = setInterval(() => {
         i++
         // audio.load()
         audio.play()
@@ -50,7 +50,11 @@
           type: 'infos',
           position: 'top center'
         });
-      }, Math.floor(Math.random() * Math.floor(60000)));
+
+        if (i > 4) {
+          clearInterval(notif)
+        }
+      }, 10000);
     }
   }
 
