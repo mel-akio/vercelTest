@@ -1,7 +1,7 @@
 <template>
     <div class="bg-light shadow-sm order-details">
         <div :class="{'bg-warning' : (order.state == 1), 'bg-green' : (order.state == 2)}"
-            style="height: 7px; background-color: rgb(208, 208, 208);"></div>
+            style="height: 10px; background-color: rgb(208, 208, 208);"></div>
         <div class="d-flex justify-content-between border-bottom mb-3 py-2 px-4">
             <div>
                 <div class="h5 font-weight-bold">
@@ -94,7 +94,7 @@
 
     .bottom-button {
         position: absolute;
-        bottom: 1em;
+        bottom: 1.5em;
         left: 0;
     }
 

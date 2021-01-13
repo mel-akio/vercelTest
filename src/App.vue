@@ -27,10 +27,11 @@
       this.$router.push('/login')
       let i = 0;
 
-      let notif = setInterval(() => {
+      setInterval(() => {
         i++
         // audio.load()
-        audio.play()
+        if (i < 3)
+          audio.play()
         this.$store.state.orders.push({
           name: this.fakeUsername[i % 7],
           id: 'E891' + i,
@@ -46,15 +47,11 @@
         })
         this.$notify({
           group: 'order',
-          title: '🔔 Nouvelle commande reçu',
+          title: '🔔 Nouvelle commande reçue',
           type: 'infos',
           position: 'top center'
         });
-
-        if (i > 4) {
-          clearInterval(notif)
-        }
-      }, 10000);
+      }, 7000);
     }
   }
 
