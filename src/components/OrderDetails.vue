@@ -1,6 +1,6 @@
 <template>
     <div class="bg-light shadow-sm order-details">
-        <div :class="{'bg-warning' : (order.state == 1), 'bg-danger' : (order.state == 2)}"
+        <div :class="{'bg-warning' : (order.state == 1), 'bg-green' : (order.state == 2)}"
             style="height: 7px; background-color: rgb(208, 208, 208);"></div>
         <div class="d-flex justify-content-between border-bottom mb-3 py-2 px-4">
             <div>
@@ -70,6 +70,10 @@
 </script>
 
 <style scoped>
+    .bg-green {
+        background-color: rgb(26, 188, 26) !important;
+    }
+
     .btn {
         border-radius: 2px;
     }
